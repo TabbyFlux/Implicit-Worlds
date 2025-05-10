@@ -1,0 +1,6 @@
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\IncoherentWorlds\bin\Debug\IncoherentWorlds.dll
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\IncoherentWorlds\bin\Debug\IncoherentWorlds.pdb
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\IncoherentWorlds\obj\Debug\IncoherentWorlds.csproj.AssemblyReference.cache
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\IncoherentWorlds\obj\Debug\IncoherentWorlds.csproj.CoreCompileInputs.cache
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\IncoherentWorlds\obj\Debug\IncoherentWorlds.dll
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\IncoherentWorlds\obj\Debug\IncoherentWorlds.pdb
