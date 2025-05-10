@@ -1,0 +1,28 @@
+Type: AboveCloudsView
+OffsetX: 0
+OffsetY: 0
+PROTECTED
+---------------
+atmosphereColor: 1E2734
+startAltitude: 20000
+endAltitude: 31400
+cloudsStartDepth: 5
+cloudsEndDepth: 40
+distantCloudsEndDepth: 200
+cloudsCount: 7
+distantCloudsCount: 30
+daySky: AtC_DarkSky
+duskSky: AtC_NightSky
+nightSky: AtC_NightSky
+
+FlyingCloud: 0, 75, 355, 0.35, 0.5, 0.9
+FlyingCloud: 0, 43, 920, 0.15, 0.3, 0.95
+
+DistantBuilding: OtR_Starcatcher1, -465, -310, 40, 75 : scale|1.2
+DistantLightning: AtC_StarcatcherLight1, -465, -40, 40, 155 : scale|1.2
+DistantBuilding: OtR_Starcatcher2, 500, -275, 60, 80 : scale|1
+DistantBuilding: OtR_Starcatcher2, -80, -160, 100, 100 : scale|0.6
+DistantBuilding: OtR_Starcatcher1, 320, -80, 150, 200 : scale|0.3
+DistantBuilding: OtR_Starcatcher2, -520, -80, 140, 200 : scale|0.3
+DistantBuilding: OtR_Starcatcher1, 120, -40, 180, 300 : scale|0.15
+DistantBuilding: OtR_Starcatcher2, -200, -40, 170, 300 : scale|0.16

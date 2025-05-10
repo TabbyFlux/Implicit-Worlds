@@ -1,0 +1,28 @@
+Type: AboveCloudsView
+OffsetX: 0
+OffsetY: 0
+PROTECTED
+---------------
+atmosphereColor: 845368
+nightAtmosphereColor: 0C0D11
+multiplyColor: 85DFCC
+startAltitude: 20000
+endAltitude: 31400
+cloudsStartDepth: 5
+cloudsEndDepth: 40
+distantCloudsEndDepth: 200
+cloudsCount: 16
+distantCloudsCount: 38
+daySky: AtC_DuskSky
+duskSky: AtC_DuskSky-Rivulet
+nightSky: AtC_NightSky
+
+FlyingCloud: 0, 75, 355, 0.35, 0.5, 0.9
+FlyingCloud: 0, 43, 920, 0.15, 0.3, 0.95
+
+DistantBuilding: Pnk_Structure3, 300, -500, 25, 20 : scale|4
+DistantBuilding: Pnk_Structure1, -600, -200, 60, 40 : scale|2
+DistantBuilding: Pnk_Structure2, -220, -140, 120, 0 : scale|1.4
+DistantBuilding: Pnk_Structure1, 540, -110, 160, -40 : scale|1
+DistantBuilding: Pnk_Structure3, -390, -60, 180, 0 : scale|0.6
+DistantBuilding: Pnk_Structure2, -480, -30, 240, 40 : scale|0.3
