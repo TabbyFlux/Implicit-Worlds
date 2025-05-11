@@ -1,25 +1,28 @@
 Type: AboveCloudsView
-OffsetX: 0
-OffsetY: 0
-PROTECTED
----------------
-atmosphereColor: 503543
+//PROTECTED
+
+atmosphereColor: 663E49
 nightAtmosphereColor: 0C0D11
-multiplyColor: 85DFCC
-startAltitude: 20000
-endAltitude: 31400
+//multiplyColor: 85DFCC
+
+startAltitude: 0
+endAltitude: 11400
 cloudsStartDepth: 5
 cloudsEndDepth: 40
 distantCloudsEndDepth: 200
 cloudsCount: 16
 distantCloudsCount: 38
-curveCloudDepth: 4
+//curveCloudDepth: 4
+
 daySky: IWPO_Sky
 duskSky: AtC_DuskSky-Rivulet
 nightSky: AtC_NightSky
+//DistantBuilding: AssetName, X, Y, Depth, AtmoDepthAdd
 
-DistantBuilding: Pnk_Structure2, -500, -320, 80, 40 : scale|4
+DistantBuilding: Pnk_Structure2, -500, -320, 80, 340 : scale|4
 DistantBuilding: IWPO_Pyramid2_Lights, -500, -352, 80, 0 : scale|4
 DistantLightning: IWPO_Pyramid2_Lights, -500, -352, 80, 155 : scale|4
-DistantBuilding: Pnk_Structure1, 500, -200, 160, 0 : scale|2
+DistantBuilding: Pnk_Structure1, 500, -200, 160, 340 : scale|2
 DistantBuilding: IWPO_Pyramid1_Lights, 500, -200, 160, 0 : scale|2
+DistantLightning: IWPO_Pyramid1_Lights, 500, -200, 160, 0 : scale|2
+DistantBuilding: Pnk_Structure3, -100, -70, 220, 340 : scale|0.8

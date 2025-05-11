@@ -4,3 +4,15 @@ D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\
 D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\IncoherentWorlds\obj\Debug\IncoherentWorlds.csproj.CoreCompileInputs.cache
 D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\IncoherentWorlds\obj\Debug\IncoherentWorlds.dll
 D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\IncoherentWorlds\obj\Debug\IncoherentWorlds.pdb
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\bin\Debug\IncoherentWorlds.dll
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\bin\Debug\IncoherentWorlds.pdb
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\bin\Debug\BepInEx.dll
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\bin\Debug\HOOKS-Assembly-CSharp.dll
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\bin\Debug\PUBLIC-Assembly-CSharp.dll
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\bin\Debug\UnityEngine.CoreModule.dll
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\bin\Debug\UnityEngine.dll
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\obj\Debug\IncoherentWorlds.csproj.AssemblyReference.cache
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\obj\Debug\IncoherentWorlds.csproj.CoreCompileInputs.cache
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\obj\Debug\Incohere.8906EAAE.Up2Date
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\obj\Debug\IncoherentWorlds.dll
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\obj\Debug\IncoherentWorlds.pdb
