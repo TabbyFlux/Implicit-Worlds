@@ -16,3 +16,5 @@ D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\
 D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\obj\Debug\Incohere.8906EAAE.Up2Date
 D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\obj\Debug\IncoherentWorlds.dll
 D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\obj\Debug\IncoherentWorlds.pdb
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\bin\Debug\RegionKit.dll
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\bin\Debug\Assembly-CSharp-firstpass.dll

@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Rain World\Modding\References\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
     <Reference Include="BepInEx">
       <HintPath>..\..\..\..\..\..\..\..\..\..\Rain World\Modding\References\BepInEx.dll</HintPath>
     </Reference>
@@ -40,11 +43,12 @@
     <Reference Include="PUBLIC-Assembly-CSharp">
       <HintPath>..\..\..\..\..\..\..\..\..\..\Rain World\Modding\References\PUBLIC-Assembly-CSharp.dll</HintPath>
     </Reference>
+    <Reference Include="RegionKit">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Rain World\Modding\References\RegionKit.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
       <HintPath>..\..\..\..\..\..\..\..\..\..\Rain World\Modding\References\UnityEngine.dll</HintPath>
     </Reference>
@@ -53,6 +57,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IWHooks.cs" />
     <Compile Include="NarrowHorizon.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

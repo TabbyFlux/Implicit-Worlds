@@ -10,17 +10,14 @@ namespace IncoherentWorlds
             this.effect = effect;
             this.isNarrowHorizon = (effect.type == IWEnums.NarrowHorizon);
             UnityEngine.Random.State state = UnityEngine.Random.state;
-            UnityEngine.Random.InitState(0);
-            if (isNarrowHorizon)
-            {
-                this.sceneOrigo = base.RoomToWorldPos(room.abstractRoom.size.ToVector2() * 10f);
-                Shader.SetGlobalVector(RainWorld.ShadPropMultiplyColor, Color.white);
-                Shader.SetGlobalVector(RainWorld.ShadPropAboveCloudsAtmosphereColor, this.atmosphereColor);
-                Shader.SetGlobalVector(RainWorld.ShadPropSceneOrigoPosition, this.sceneOrigo);
-                Shader.SetGlobalVector(RainWorld.ShadPropMultiplyColor, Color.white);
-                this.AddElement(new Simple2DBackgroundIllustration(this, "iwnh_bkg", new Vector2(683f, 384f)));
-                this.AddElement(new Building(this, "iwnh_megastructure", new Vector2(-30f, 0f), 1f, 100f, 0f, 4.2f, 200));
-            }
+            UnityEngine.Random.InitState(12);
+            this.sceneOrigo = base.RoomToWorldPos(room.abstractRoom.size.ToVector2() * 10f);
+            Shader.SetGlobalVector(RainWorld.ShadPropMultiplyColor, Color.white);
+            Shader.SetGlobalVector(RainWorld.ShadPropAboveCloudsAtmosphereColor, this.atmosphereColor);
+            Shader.SetGlobalVector(RainWorld.ShadPropSceneOrigoPosition, this.sceneOrigo);
+            Shader.SetGlobalVector(RainWorld.ShadPropMultiplyColor, Color.white);
+            this.AddElement(new Simple2DBackgroundIllustration(this, "iwnh_bkg", new Vector2(683f, 384f)));
+            this.AddElement(new Building(this, "iwnh_megastructure", new Vector2(0f, 100f), 1f, 60f, 0f, 4.2f, 100));
             UnityEngine.Random.state = state;
         }
         public float AtmosphereColorAtDepth(float depth)
@@ -37,7 +34,7 @@ namespace IncoherentWorlds
         }
         public RoomSettings.RoomEffect effect;
         public bool isNarrowHorizon;
-        public float floorLevel = -2000f;
+        private float floorLevel = -2000f;
         public Color atmosphereColor = new Color(0.1f, 0.1f, 0.1f);
         public class Building : BackgroundSceneElement
         {
