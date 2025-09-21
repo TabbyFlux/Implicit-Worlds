@@ -2,7 +2,7 @@
 	"id": "incoherentworlds.itstabby",
 	"name": "Incoherent Worlds",
 	"version": "1.0.0",
-	"authors": "ItsTabby",
+	"authors": "TabbyFlux",
 	"hide_version": false,
 	"description": "Suddenly, an unknown portal rift has appeared in the world... Do you dare to go through it?",
 	"requirements": ["moreslugcats", "watcher", "regionkit", "pom", "crs"],

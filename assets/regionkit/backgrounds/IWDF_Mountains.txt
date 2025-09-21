@@ -1,0 +1,14 @@
+Type: AboveCloudsView
+PROTECTED
+
+startAltitude: 0
+endAltitude: 10000
+daySky: IWDF_bkg
+duskSky: IWDF_bkg
+nightSky: IWDF_bkg
+cloudsCount: 0
+distantCloudsCount: 0
+atmosphereColor: DADEDF
+multiplycolor: 979B9D
+
+DistantBuilding: Pnk_Structure1, -10000, -10000, 0, 0 : scale|0.1

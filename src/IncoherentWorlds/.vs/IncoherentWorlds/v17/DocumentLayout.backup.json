@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{1A175A21-322A-4085-BA42-1BCC5DDC8E8A}|IncoherentWorlds.csproj|solutionrelative:plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A175A21-322A-4085-BA42-1BCC5DDC8E8A}|IncoherentWorlds.csproj|D:\\SteamLibrary\\steamapps\\common\\Rain World\\RainWorld_Data\\StreamingAssets\\mods\\Incoherent-Worlds\\src\\IncoherentWorlds\\iwhooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A175A21-322A-4085-BA42-1BCC5DDC8E8A}|IncoherentWorlds.csproj|solutionrelative:iwhooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A175A21-322A-4085-BA42-1BCC5DDC8E8A}|IncoherentWorlds.csproj|d:\\steamlibrary\\steamapps\\common\\rain world\\rainworld_data\\streamingassets\\mods\\incoherent-worlds\\src\\incoherentworlds\\narrowhorizon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A175A21-322A-4085-BA42-1BCC5DDC8E8A}|IncoherentWorlds.csproj|solutionrelative:narrowhorizon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A175A21-322A-4085-BA42-1BCC5DDC8E8A}|IncoherentWorlds.csproj|D:\\SteamLibrary\\steamapps\\common\\Rain World\\RainWorld_Data\\StreamingAssets\\mods\\Incoherent-Worlds\\src\\IncoherentWorlds\\narrowhorizon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A175A21-322A-4085-BA42-1BCC5DDC8E8A}|IncoherentWorlds.csproj|solutionrelative:narrowhorizon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A175A21-322A-4085-BA42-1BCC5DDC8E8A}|IncoherentWorlds.csproj|d:\\steamlibrary\\steamapps\\common\\rain world\\rainworld_data\\streamingassets\\mods\\incoherent-worlds\\src\\incoherentworlds\\iwhooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A175A21-322A-4085-BA42-1BCC5DDC8E8A}|IncoherentWorlds.csproj|solutionrelative:iwhooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +22,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -32,33 +40,33 @@
               "RelativeDocumentMoniker": "Plugin.cs",
               "ToolTip": "D:\\SteamLibrary\\steamapps\\common\\Rain World\\RainWorld_Data\\StreamingAssets\\mods\\Incoherent-Worlds\\src\\IncoherentWorlds\\Plugin.cs",
               "RelativeToolTip": "Plugin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADUAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-10T16:45:00.948Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "IWHooks.cs",
               "DocumentMoniker": "D:\\SteamLibrary\\steamapps\\common\\Rain World\\RainWorld_Data\\StreamingAssets\\mods\\Incoherent-Worlds\\src\\IncoherentWorlds\\IWHooks.cs",
               "RelativeDocumentMoniker": "IWHooks.cs",
               "ToolTip": "D:\\SteamLibrary\\steamapps\\common\\Rain World\\RainWorld_Data\\StreamingAssets\\mods\\Incoherent-Worlds\\src\\IncoherentWorlds\\IWHooks.cs",
               "RelativeToolTip": "IWHooks.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAB3AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-13T18:27:46.701Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "NarrowHorizon.cs",
               "DocumentMoniker": "D:\\SteamLibrary\\steamapps\\common\\Rain World\\RainWorld_Data\\StreamingAssets\\mods\\Incoherent-Worlds\\src\\IncoherentWorlds\\NarrowHorizon.cs",
               "RelativeDocumentMoniker": "NarrowHorizon.cs",
               "ToolTip": "D:\\SteamLibrary\\steamapps\\common\\Rain World\\RainWorld_Data\\StreamingAssets\\mods\\Incoherent-Worlds\\src\\IncoherentWorlds\\NarrowHorizon.cs",
               "RelativeToolTip": "NarrowHorizon.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-10T17:33:36.347Z",
               "EditorCaption": ""

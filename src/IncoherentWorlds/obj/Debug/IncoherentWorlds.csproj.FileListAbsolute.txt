@@ -16,5 +16,15 @@ D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\
 D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\obj\Debug\Incohere.8906EAAE.Up2Date
 D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\obj\Debug\IncoherentWorlds.dll
 D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\obj\Debug\IncoherentWorlds.pdb
-D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\bin\Debug\RegionKit.dll
 D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\bin\Debug\Assembly-CSharp-firstpass.dll
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\bin\Debug\Mono.Cecil.dll
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\bin\Debug\Mono.Cecil.Rocks.dll
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\bin\Debug\MonoMod.dll
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\bin\Debug\MonoMod.RuntimeDetour.dll
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\bin\Debug\MonoMod.Utils.dll
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\bin\Debug\Unity.Mathematics.dll
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\bin\Debug\BepInEx.xml
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\bin\Debug\MonoMod.RuntimeDetour.xml
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\bin\Debug\MonoMod.Utils.xml
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\obj\Debug\IncoherentWorlds.GeneratedMSBuildEditorConfig.editorconfig
+D:\SteamLibrary\steamapps\common\Rain World\RainWorld_Data\StreamingAssets\mods\Incoherent-Worlds\src\IncoherentWorlds\obj\Debug\IncoherentWorlds.sourcelink.json
