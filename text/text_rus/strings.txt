@@ -1,5 +1,5 @@
-0incoherentworlds.itstabby-name|Несвязные миры
-incoherentworlds.itstabby-description|Неожиданно в мире появился неизвестный портальный разлом... Осмелишься ли ты пройти через него?
+0implicitworlds.tabbyflux-name|Неявные миры
+implicitworlds.tabbyflux-description|Неожиданно в мире появился неизвестный портальный разлом... Осмелишься ли ты пройти через него?
 Stellar Railways|Звёздные магистрали
 Narrow Horizon|Узкий горизонт
 Pyramidal Oscillators|Пирамидальные осцилляторы

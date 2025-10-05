@@ -11,14 +11,14 @@ using System.Security.Permissions;
 [assembly: SuppressMessage("Style", "IDE0290:Use primary constructor", Justification = "because nobody fucking cares lmao")]
 #pragma warning restore CS0618
 
-namespace IncoherentWorlds
+namespace ImplicitWorlds
 {
     [BepInDependency(RegionKit.API.Core.GUID, BepInDependency.DependencyFlags.HardDependency)]
     [BepInPlugin(PLUGIN_GUID, PLUGIN_NAME, PLUGIN_VERSION)]
     public sealed class Plugin : BaseUnityPlugin
     {
-        public const string PLUGIN_GUID = "incoherentworlds.itstabby";
-        public const string PLUGIN_NAME = "Incoherent Worlds";
+        public const string PLUGIN_GUID = "implicitworlds.tabbyflux";
+        public const string PLUGIN_NAME = "Implicit Worlds";
         public const string PLUGIN_VERSION = "1.0.0";
         public static new ManualLogSource Logger;
         private bool isInit;
@@ -33,7 +33,7 @@ namespace IncoherentWorlds
         {
             Logger = null;
             On.RainWorld.OnModsInit -= RainWorld_OnModsInit;
-            IWEnums.UnregisterValues();
+            IWEnums.RoomEffectType.UnregisterValues();
             IWHooks.Undo();
             instance = null;
         }
@@ -45,10 +45,10 @@ namespace IncoherentWorlds
                 bool isInit = this.isInit;
                 if (!isInit)
                 {
-                    IWEnums.RegisterValues();
+                    IWEnums.RoomEffectType.RegisterValues();
                     IWHooks.Apply();
                     this.isInit = true;
-                    UnityEngine.Debug.Log($"[IW]: inited: {this.isInit}");
+                    UnityEngine.Debug.Log($"[ImplicitWorlds]: inited: {this.isInit}");
                 }
             }
             catch (Exception ex)

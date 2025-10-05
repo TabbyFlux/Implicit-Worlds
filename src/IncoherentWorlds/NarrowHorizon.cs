@@ -1,4 +1,4 @@
-﻿namespace IncoherentWorlds
+﻿namespace ImplicitWorlds
 {
     public class NarrowHorizon : BackgroundScene
     {
@@ -7,6 +7,7 @@
             UnityEngine.Random.State state = UnityEngine.Random.state;
             UnityEngine.Random.InitState(42);
             this.effect = effect;
+            this.type = effect.type;
             sceneOrigo = base.RoomToWorldPos(room.abstractRoom.size.ToVector2() * 10f);
             Shader.SetGlobalVector(RainWorld.ShadPropMultiplyColor, Color.white);
             Shader.SetGlobalVector(RainWorld.ShadPropAboveCloudsAtmosphereColor, atmosphereColor);
@@ -38,6 +39,7 @@
             base.Destroy();
         }
         public RoomSettings.RoomEffect effect;
+        public RoomSettings.RoomEffect.Type type = IWEnums.RoomEffectType.NarrowHorizon;
         private float floorLevel = -2000f;
         private static Color atmosphereColor = new Color(0.1f, 0.1f, 0.1f);
         private static float sceneScale = 1f;

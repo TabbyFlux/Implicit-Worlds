@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace IncoherentWorlds
+namespace ImplicitWorlds
 {
     public class StellarSky : BackgroundScene //The Stellar Sky in Stellar Railways
     {
