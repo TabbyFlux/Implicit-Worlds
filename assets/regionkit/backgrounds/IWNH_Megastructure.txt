@@ -1,0 +1,10 @@
+Type: AboveCloudsView
+startAltitude: 0
+endAltitude: 20000
+daySky: IWNH_Bkg
+atmosphereColor: FF6D29
+//multiplycolor: 43B7EA
+cloudsCount: 0
+distantCloudsCount: 0
+
+//DistantBuilding: AssetName, X, Y, Depth, AtmoDepthAdd

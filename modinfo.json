@@ -4,7 +4,7 @@
 	"version": "1.0.0",
 	"authors": "TabbyFlux",
 	"hide_version": false,
-	"description": "Suddenly, an unknown portal rift has appeared in the world... Do you dare to go through it?",
+	"description": "Suddenly, an unknown portal rift has appeared in the world... Do you dare to go through it?<LINE><LINE>The spatial strands of the universe shuddered, and new worlds revealed... Explore 6 new, mysterious regions, encounter anomalies and failures of reality and space-time.<LINE><LINE>Features:<LINE>- 6 new regions<LINE>- Base and MSC compatibility<LINE>- Watcher compatibility<LINE>- NEW ENDING",
 	"requirements": ["moreslugcats", "watcher", "regionkit", "pom", "crs"],
 	"requirements_names": ["More Slugcats Expansion", "The Watcher", "RegionKit", "POM", "Custom Region Support"],
 	"checksum_override_version": false,

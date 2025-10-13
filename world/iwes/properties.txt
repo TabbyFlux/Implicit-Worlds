@@ -1,0 +1,6 @@
+overseersSpawnChance: 0
+overseersMin: 0
+overseersMax: 0
+playerGuideOverseerSpawnChance: 0
+hideTimer: true
+Subregion: Encapsulated Systems
