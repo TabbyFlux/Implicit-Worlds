@@ -7,7 +7,6 @@
             UnityEngine.Random.State state = UnityEngine.Random.state;
             UnityEngine.Random.InitState(42);
             this.effect = effect;
-            this.type = effect.type;
             sceneOrigo = base.RoomToWorldPos(room.abstractRoom.size.ToVector2() * 10f);
             Shader.SetGlobalVector(RainWorld.ShadPropMultiplyColor, Color.white);
             Shader.SetGlobalVector(RainWorld.ShadPropAboveCloudsAtmosphereColor, atmosphereColor);
@@ -23,7 +22,7 @@
                 float num4 = Mathf.PerlinNoise(num3 / 4f, 0f) * 2000f * num2;
                 AddElement(new NarrowHorizon.DustDune(this, -2000f + num4, 0f, num3, 8000f + num4, 400f));
             }
-            AddElement(new Building(this, "iwnh_megastructure", new Vector2(-30f, 0f), 1f, 60f, 0f, 4.2f, 100));
+            //AddElement(new Building(this, "iwnh_megastructure", new Vector2(-30f, 0f), 1f, 60f, 0f, 4.2f, 100));
             UnityEngine.Random.state = state;
         }
         public float AtmosphereColorAtDepth(float depth)
@@ -39,7 +38,6 @@
             base.Destroy();
         }
         public RoomSettings.RoomEffect effect;
-        public RoomSettings.RoomEffect.Type type = IWEnums.RoomEffectType.NarrowHorizon;
         private float floorLevel = -2000f;
         private static Color atmosphereColor = new Color(0.1f, 0.1f, 0.1f);
         private static float sceneScale = 1f;

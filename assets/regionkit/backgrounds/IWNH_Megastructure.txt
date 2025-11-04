@@ -1,10 +1,21 @@
 Type: AboveCloudsView
 startAltitude: 0
-endAltitude: 20000
+endAltitude: 30000
 daySky: IWNH_Bkg
-atmosphereColor: FF6D29
+atmosphereColor: F5BF2A
 //multiplycolor: 43B7EA
 cloudsCount: 0
 distantCloudsCount: 0
 
 //DistantBuilding: AssetName, X, Y, Depth, AtmoDepthAdd
+DistantBuilding: IWNH_CeilingFront1, 0, 0, 1, -50 : scale|25
+DistantBuilding: IWNH_CeilingFront1, 0, 0, 10, -50 : scale|15
+DistantBuilding: IWNH_CeilingFront1, 0, 0, 15, -50 : scale|10
+
+DistantBuilding: IWNH_CeilingFront2, 0, -260, 25, -50 : scale|8
+DistantBuilding: IWNH_CeilingFront2, 0, -280, 30, -50 : scale|7
+DistantBuilding: IWNH_CeilingFront2, 0, -300, 35, -50 : scale|6.4
+
+DistantBuilding: IWNH_CeilingFront3, 0, -215, 45, -100 : scale|5.2
+DistantBuilding: IWNH_CeilingFront3Spire, 0, -230, 50, -100 : scale|5
+DistantBuilding: IWNH_CeilingFront3, 0, -245, 55, -69 : scale|4.8

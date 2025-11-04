@@ -1,25 +1,30 @@
-﻿using RegionKit.Modules.Effects;
-
-namespace ImplicitWorlds
+﻿namespace ImplicitWorlds
 {
     public class IWHooks
     {
         public static void Apply()
         {
-            On.RainWorldGame.Update += TestHook;
+            On.Room.ctor += NH_ctor;
         }
         public static void Undo()
         {
-            On.RainWorldGame.Update -= TestHook;
+            On.Room.ctor -= NH_ctor;
         }
-        private static void TestHook(On.RainWorldGame.orig_Update orig, RainWorldGame self)
+        private static void NH_ctor(On.Room.orig_ctor orig, Room self, RainWorldGame game, World world, AbstractRoom absRoom, bool DevUI)
         {
-            orig(self);
-            if (Input.GetKey(KeyCode.J))
+            try
             {
-                self.RealizedPlayerFollowedByCamera.room.PlaySound(SoundID.SS_AI_Give_The_Mark_Boom, 0f, 1f, 1f);
-                UnityEngine.Debug.Log("[ImplicitWorlds]: sound has been played!");
+                if (self.fullyLoaded && self.roomSettings.GetEffectAmount(IWEnums.RoomEffectType.NarrowHorizon) > 0f)
+                {
+                    self.AddObject(new NarrowHorizon(self, self.roomSettings.GetEffect(IWEnums.RoomEffectType.NarrowHorizon)));
+                }
             }
+            catch (Exception ex)
+            {
+                Plugin.Logger.LogError(ex);
+                UnityEngine.Debug.Log("[ImplicitWorlds]: NH_ctor hook failed!");
+            }
+            orig(self, game, world, absRoom, DevUI);
         }
     }
 }
