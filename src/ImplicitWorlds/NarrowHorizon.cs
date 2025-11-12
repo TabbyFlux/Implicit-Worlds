@@ -5,22 +5,23 @@
         public NarrowHorizon(Room room, RoomSettings.RoomEffect effect) : base(room)
         {
             UnityEngine.Random.State state = UnityEngine.Random.state;
-            UnityEngine.Random.InitState(42);
+            UnityEngine.Random.InitState(0);
             this.effect = effect;
-            sceneOrigo = base.RoomToWorldPos(room.abstractRoom.size.ToVector2() * 10f);
-            Shader.SetGlobalVector(RainWorld.ShadPropMultiplyColor, Color.white);
+            //sceneOrigo = base.RoomToWorldPos(room.abstractRoom.size.ToVector2() * 10f);
+            sceneOrigo = ViewOffset;
+            perspectiveCenter = new Vector2(room.game.rainWorld.screenSize.x * ConvergenceMult.x, room.game.rainWorld.screenSize.y * ConvergenceMult.y);
+            sceneScale = ViewScale;
+            depthScale = ViewDepthMultiplier;
             Shader.SetGlobalVector(RainWorld.ShadPropAboveCloudsAtmosphereColor, atmosphereColor);
-            Shader.SetGlobalVector(RainWorld.ShadPropSceneOrigoPosition, sceneOrigo);
-            Shader.SetGlobalVector(RainWorld.ShadPropMultiplyColor, Color.white);
             AddElement(new Simple2DBackgroundIllustration(this, "iwnh_bkg", new Vector2(683f, 384f)));
-            int num = 32;
+            int totalDunes = 128;
             base.LoadGraphic("otr_dustdunes", false, false);
-            for (int i = 0; i < num; i++)
+            for (int i = 0; i < totalDunes; i++)
             {
-                float num2 = Mathf.Pow((float)i / (float)(num - 1), 1.75f);
-                float num3 = Mathf.Lerp(startDepth, fogDepth, num2);
-                float num4 = Mathf.PerlinNoise(num3 / 4f, 0f) * 2000f * num2;
-                AddElement(new NarrowHorizon.DustDune(this, -2000f + num4, 0f, num3, 8000f + num4, 400f));
+                float interpolation = Mathf.Pow((float)i / (float)(totalDunes - 1), 1.75f);
+                float depth = Mathf.Lerp(startDepth, fogDepth, interpolation);
+                float offsetX = Mathf.PerlinNoise(depth / 4f, 0f) * 2000f * interpolation;
+                AddElement(new NarrowHorizon.SandDune(this, posX + offsetX, 0f, depth, 8000f + offsetX, 600f));
             }
             //AddElement(new Building(this, "iwnh_megastructure", new Vector2(-30f, 0f), 1f, 60f, 0f, 4.2f, 100));
             UnityEngine.Random.state = state;
@@ -38,12 +39,16 @@
             base.Destroy();
         }
         public RoomSettings.RoomEffect effect;
-        private float floorLevel = -2000f;
-        private static Color atmosphereColor = new Color(0.1f, 0.1f, 0.1f);
+        private float posX = -2000f;
+        private static Color atmosphereColor = new Color(1f, 0.666f, 0.435f);
+        private static Vector2 ConvergenceMult = new Vector2(0.4f, 0.5f);
+        private static Vector2 ViewOffset = new Vector2(0f, 0f);
+        private static float ViewScale = 10f;
+        private static float ViewDepthMultiplier = 8f;
         private static float sceneScale = 1f;
         private static float depthScale = 1f;
         private static float startDepth = 2f;
-        private static float fogDepth = 30f;
+        private static float fogDepth = 80f;
         public Vector2 perspectiveCenter;
         public Vector2 DrawPos(BackgroundSceneElement element, Vector2 camPos, RoomCamera camera)
         {
@@ -87,13 +92,13 @@
             }
             public override void InitiateSprites(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam)
             {
-                sLeaser.sprites = new FSprite[this.layers];
+                sLeaser.sprites = new FSprite[layers];
                 for(int i = 0; i < sLeaser.sprites.Length; i++)
                 {
-                    sLeaser.sprites[i] = new FSprite(this.assetName, true);
+                    sLeaser.sprites[i] = new FSprite(assetName, true);
                     sLeaser.sprites[i].shader = rCam.game.rainWorld.Shaders["AncientUrbanBuilding"];
-                    sLeaser.sprites[i].scale = this.scale * (1f / this.GetDepthForLayer(1f - (float)i / (float)this.layers));
-                    sLeaser.sprites[i].rotation = this.rotation;
+                    sLeaser.sprites[i].scale = scale * (1f / GetDepthForLayer(1f - (float)i / (float)layers));
+                    sLeaser.sprites[i].rotation = rotation;
                 }
                 this.AddToContainer(sLeaser, rCam, null);
             }
@@ -101,16 +106,16 @@
             {
                 for (int i = 0; i < sLeaser.sprites.Length; i++)
                 {
-                    float depthForLayer = GetDepthForLayer(1f - (float)i / (float)this.layers);
-                    Vector2 vector = this.scene.DrawPos(pos, depthForLayer, camPos, rCam.hDisplace);
+                    float depthForLayer = GetDepthForLayer(1f - (float)i / (float)layers);
+                    Vector2 vector = scene.DrawPos(pos, depthForLayer, camPos, rCam.hDisplace);
                     sLeaser.sprites[i].x = vector.x;
                     sLeaser.sprites[i].y = vector.y;
-                    sLeaser.sprites[i].color = new Color(nhScene.AtmosphereColorAtDepth(depthForLayer), 1f - (float)i / (float)this.layers, 0f);
+                    sLeaser.sprites[i].color = new Color(nhScene.AtmosphereColorAtDepth(depthForLayer), 1f - (float)i / (float)layers, 0f);
                 }
                 base.DrawSprites(sLeaser, rCam, timeStacker, camPos);
             }
         }
-        public class DustDune : BackgroundSceneElement
+        public class SandDune : BackgroundSceneElement
         {
             private NarrowHorizon nhScene
             {
@@ -119,7 +124,7 @@
                     return scene as NarrowHorizon;
                 }
             }
-            public DustDune(NarrowHorizon scene, float x, float y, float depth, float scaleX, float scaleY) : base(scene, new Vector2(x * sceneScale, y * sceneScale), depth)
+            public SandDune(NarrowHorizon scene, float x, float y, float depth, float scaleX, float scaleY) : base(scene, new Vector2(x * sceneScale, y * sceneScale), depth)
             {
                 this.scaleX = scaleX * sceneScale;
                 this.scaleY = scaleY * sceneScale;
@@ -166,17 +171,17 @@
             {
                 sLeaser.sprites = new FSprite[1];
                 sLeaser.sprites[0] = new FSprite("smoke1", true);
-                sLeaser.sprites[0].shader = rCam.game.rainWorld.Shaders[this.shaderType ? "Dust" : "CloudDistant"];
+                sLeaser.sprites[0].shader = rCam.game.rainWorld.Shaders[shaderType ? "Dust" : "CloudDistant"];
                 sLeaser.sprites[0].anchorY = 0f;
-                this.AddToContainer(sLeaser, rCam, null);
+                AddToContainer(sLeaser, rCam, null);
             }
             public override void DrawSprites(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, float timeStacker, Vector2 camPos)
             {
                 float num = 2f;
                 float y = base.DrawPos(camPos, rCam.hDisplace).y;
-                sLeaser.sprites[0].scaleY = this.flattened * num;
+                sLeaser.sprites[0].scaleY = flattened * num;
                 sLeaser.sprites[0].scaleX = num;
-                sLeaser.sprites[0].color = new Color(this.shaderInputColor, this.randomOffset, Mathf.Lerp(this.flattened, 1f, 0.5f), this.alpha);
+                sLeaser.sprites[0].color = new Color(shaderInputColor, randomOffset, Mathf.Lerp(flattened, 1f, 0.5f), alpha);
                 sLeaser.sprites[0].x = 683f - rCam.hDisplace;
                 sLeaser.sprites[0].y = y;
                 base.DrawSprites(sLeaser, rCam, timeStacker, camPos);

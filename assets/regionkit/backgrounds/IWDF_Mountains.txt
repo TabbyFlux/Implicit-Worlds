@@ -3,10 +3,13 @@ PROTECTED
 
 startAltitude: 0
 endAltitude: 10000
+cloudsStartDepth: 5
+cloudsEndDepth: 40
+distantCloudsEndDepth: 200
 daySky: IWDF_bkg
 duskSky: IWDF_bkg
 nightSky: IWDF_bkg
-cloudsCount: 0
+cloudsCount: 7
 distantCloudsCount: 0
 atmosphereColor: DADEDF
 multiplycolor: 979B9D

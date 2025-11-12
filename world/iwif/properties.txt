@@ -4,4 +4,4 @@ overseersMin: 0
 overseersMax: 0
 playerGuideOverseerSpawnChance: 0
 hideTimer: true
-Subregion: Pyramidal Oscillators
+Subregion: Integral Field

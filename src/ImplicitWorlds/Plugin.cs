@@ -1,6 +1,5 @@
 ﻿global using BepInEx;
 global using BepInEx.Logging;
-global using On;
 global using System;
 global using UnityEngine;
 using System.Diagnostics.CodeAnalysis;
@@ -49,6 +48,7 @@ namespace ImplicitWorlds
                     IWHooks.Apply();
                     this.isInit = true;
                     UnityEngine.Debug.Log($"[ImplicitWorlds]: inited: {this.isInit}");
+                    Logger.LogDebug($"[ImplicitWorlds]: inited: {this.isInit}");
                 }
             }
             catch (Exception ex)
