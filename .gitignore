@@ -1,5 +1,5 @@
 # Custom
-lib/*.dll
+lib/
 
 
 ## Ignore Visual Studio temporary files, build results, and
