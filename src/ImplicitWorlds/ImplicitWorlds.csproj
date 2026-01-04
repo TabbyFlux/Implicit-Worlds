@@ -26,6 +26,9 @@
     <Reference Include="RegionKit">
       <HintPath>..\..\lib\RegionKit.dll</HintPath>
     </Reference>
+    <Reference Include="Pom">
+      <HintPath>..\..\lib\Pom.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.ImageConversionModule">
       <HintPath>..\..\lib\UnityEngine.ImageConversionModule.dll</HintPath>
     </Reference>

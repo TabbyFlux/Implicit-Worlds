@@ -34,6 +34,11 @@
                             self.AddObject(new IntegralField(self, self.roomSettings.effects[i]));
                             UnityEngine.Debug.Log("[ImplicitWorlds]: Integral Field view added!");
                         }
+                        else if (self.roomSettings.effects[i].type == IWEnums.RoomEffectType.EncapsulatedSystems)
+                        {
+                            self.AddObject(new EncapsulatedSystems(self, self.roomSettings.effects[i]));
+                            UnityEngine.Debug.Log("[ImplicitWorlds]: Encapsulated Systems view added!");
+                        }
                     }
                 }
             }

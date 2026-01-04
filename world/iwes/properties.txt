@@ -4,3 +4,4 @@ overseersMax: 0
 playerGuideOverseerSpawnChance: 0
 hideTimer: true
 Subregion: Encapsulated Systems
+Subregion: Encapsulated Systems (Metaservers)

@@ -5,3 +5,4 @@ overseersMax: 0
 playerGuideOverseerSpawnChance: 0
 hideTimer: true
 Subregion: Integral Field
+Subregion: Integral Field (Transmitting Bridge)

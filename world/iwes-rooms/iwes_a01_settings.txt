@@ -1,0 +1,11 @@
+Template: NONE
+DangerType: None
+Clouds: 1
+Grime: 0
+RandomItemDensity: 0.1056048
+RandomItemSpearChance: 0
+Palette: 38256
+Effects: ZeroG-0.7216032-20-20, SkyAndLightBloom-0.1043986-27.8656-75.35547, ZeroGSpecks-0.02319933-277.5875-21.4625, FairyParticles-0.104399-282.9235-76.95625, 
+PlacedObjects: LightSource><673.801><344.3491><0.4316068~Environment~-459.9578~-53.67499~-194.9507~9.741699~0~0~None~0~0, LightFixture><1010.611><40.91474><ZapCoilLight~-6.691162~32.15385~21, LightSource><308.927><331.6422><0.4026075~Environment~-281.7375~-190.275~-84.46564~12.43298~0~0~None~0~0, LightSource><832.6404><601.6398><0.4548061~Environment~274.8008~-215.8875~-207.1921~-138.574~0~0~None~0~0, LightFixture><58.99939><101.6591><ZapCoilLight~-94.20058~15.61252~26, LightFixture><1225.632><677.1064><ZapCoilLight~-234.5354~16.14624~20, LightFixture><476.3474><594.8902><ZapCoilLight~-226.5318~36.42267~24, FairyParticleSettings><-58.67975><272.3674><-502.4477~-21.22098~0~1.579981~1.570527~0~1~1.448696~350.8958~500~40~99.99881~0~20.87928~0~360~0.5045936~0.6031925~0.1985732~0.2282609~0.1065475~0.1645037~1~0.1010099~7.036139~Pixel~SIN_IO~SIN_IO~0~0~0, 
+AmbientSounds: OMNI><so_sfx-deepstonebass.ogg><454.6183><579.2473><0.3098078><1, OMNI><so_sfx-datatones.ogg><630.5493><580.6766><0.1056048><1, 
+FadePalette: 25, 0.3098082

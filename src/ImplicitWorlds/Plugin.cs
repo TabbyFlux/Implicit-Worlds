@@ -45,6 +45,7 @@ namespace ImplicitWorlds
                 if (!isInit)
                 {
                     IWEnums.RoomEffectType.RegisterValues();
+                    IWEnums.RoomPOMObjects.RegisterPOMObjects();
                     IWHooks.Apply();
                     this.isInit = true;
                     UnityEngine.Debug.Log($"[ImplicitWorlds]: inited: {this.isInit}");
