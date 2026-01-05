@@ -37,7 +37,7 @@ namespace ImplicitWorlds.POMObjects
             {
                 for (int j = 0; j < room.physicalObjects[i].Count; j++)
                 {
-                    if (Custom.InsideRect(room.GetTilePosition(room.physicalObjects[i][j].bodyChunks[0].pos), Rect) && room.physicalObjects[i][j] is Player)
+                    if (Rect.Includes(room.GetTilePosition(room.physicalObjects[i][j].bodyChunks[0].pos)) && room.physicalObjects[i][j] is Player)
                     {
                         room.gravity = value;
                     }
