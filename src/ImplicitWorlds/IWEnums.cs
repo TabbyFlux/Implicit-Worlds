@@ -1,6 +1,4 @@
-﻿using ImplicitWorlds.POMObjects;
-
-namespace ImplicitWorlds
+﻿namespace ImplicitWorlds
 {
     public static class IWEnums
     {
@@ -27,10 +25,12 @@ namespace ImplicitWorlds
         }
         public static class RoomPOMObjects
         {
+            public static PlacedObject.Type GravityRectZone = new(nameof(POMObjects.GravityRectZoneObjectType.GravityRectZone), true);
+
             public const string IW_POM_OBJECTS_CATEGORY = "ImplicitWorlds";
             public static void RegisterPOMObjects()
             {
-                GravityRectZone.RegisterObject();
+                Pom.Pom.RegisterManagedObject(new POMObjects.GravityRectZoneObjectType());
             }
         }
     }
