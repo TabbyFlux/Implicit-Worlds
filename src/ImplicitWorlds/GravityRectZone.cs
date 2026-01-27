@@ -18,6 +18,7 @@ namespace ImplicitWorlds.POMObjects
             {
                 this.pObj = pObj;
                 this.room = room;
+                //this.pObj.active = true;
                 room.AddObject(this);
                 UnityEngine.Debug.Log("[IW]: GravityRectZone created!");
             }
@@ -25,14 +26,39 @@ namespace ImplicitWorlds.POMObjects
             {
                 get
                 {
-                    IntRect result = IntRect.MakeFromIntVector2(((GravityRectZoneData)pObj.data).intV2Rect);
-                    UnityEngine.Debug.Log($"[IW]: Rect is calculated! The area is: {(result.top - result.bottom) * (result.right - result.left)}");
-                    return result;
-                    //int rectX = ((GravityRectZoneData)pObj.data).intV2Rect.x;
-                    //int rectY = ((GravityRectZoneData)pObj.data).intV2Rect.y;
-                    //int posX = (int)((GravityRectZoneData)pObj.data).owner.pos.x;
-                    //int posY = (int)((GravityRectZoneData)pObj.data).owner.pos.y;
-                    //return new IntRect(Math.Min(posX, posX + rectX), Math.Min(posY, posY + rectY), Math.Max(posX, posX + rectX), Math.Max(posY, posY + rectY));
+                    IntRect initialRect = IntRect.MakeFromIntVector2(((GravityRectZoneData)pObj.data).intV2Rect);
+                    IntRect resultRect = new IntRect((int)(pObj.data.owner.pos.x / 20), (int)(pObj.data.owner.pos.y / 20), (int)(pObj.data.owner.pos.x / 20) + initialRect.right, (int)(pObj.data.owner.pos.y / 20) + initialRect.top);
+                    //UnityEngine.Debug.Log($"[IW]: Rect is calculated! Left: {resultRect.left}, Bottom: {resultRect.bottom}, Right: {resultRect.right}, Top: {resultRect.top}; Height: {resultRect.Height}, Width: {resultRect.Width}, Area: {resultRect.Area}");
+                    return resultRect;
+                }
+            }
+            public float InitialGravity
+            {
+                get
+                {
+                    float result = 1f;
+                    bool isZeroG = false;
+                    for (int i = 0; i < room.roomSettings.effects.Count; i++)
+                    {
+                        if (room.roomSettings.effects[i].type == RoomSettings.RoomEffect.Type.ZeroG)
+                        {
+                            isZeroG = true;
+                            result = room.roomSettings.effects[i].amount;
+                        }
+                        else if (room.roomSettings.effects[i].type == RoomSettings.RoomEffect.Type.BrokenZeroG)
+                        {
+                            isZeroG = true;
+                            result = room.roomSettings.effects[i].amount;
+                        }
+                    }
+                    if (isZeroG)
+                    {
+                        return result;
+                    }
+                    else
+                    {
+                        return 1f;
+                    }
                 }
             }
             public override void Update(bool eu)
@@ -44,12 +70,19 @@ namespace ImplicitWorlds.POMObjects
                     {
                         for (int k = 0; k < room.physicalObjects[i][j].bodyChunks.Length; k++)
                         {
+                            bool wasInsideRect = false;
                             Vector2 vector = room.physicalObjects[i][j].bodyChunks[k].ContactPoint.ToVector2();
                             Vector2 pos = room.physicalObjects[i][j].bodyChunks[k].pos + vector * (room.physicalObjects[i][j].bodyChunks[k].rad + 30f);
-                            if (Rect.Contains(room.GetTilePosition(pos)) && room.physicalObjects[i][j] is Player)
+                            if (Rect.Contains(room.GetTilePosition(pos)) && room.physicalObjects[i][j] is Player && wasInsideRect == false)
                             {
                                 room.gravity = ((GravityRectZoneData)pObj.data).GetValue<float>("value");
                                 UnityEngine.Debug.Log("[IW]: Player inside rect!");
+                                wasInsideRect = true;
+                            }
+                            if (!Rect.Contains(room.GetTilePosition(pos), false) && wasInsideRect)
+                            {
+                                room.gravity = 1f; //InitialGravity;
+                                wasInsideRect = false;
                             }
                         }
                     }
@@ -64,8 +97,8 @@ namespace ImplicitWorlds.POMObjects
 
             public static Pom.Pom.ManagedField[] managedFields = new Pom.Pom.ManagedField[]
             {
-            new Pom.Pom.FloatField("value", 0f, 1f, 0f, 0.01f, control: Pom.Pom.ManagedFieldWithPanel.ControlType.slider, displayName: "Value"),
-            new Pom.Pom.IntVector2Field("rect", new IntVector2(3, 3), controlType: Pom.Pom.IntVector2Field.IntVectorReprType.rect)
+                new Pom.Pom.FloatField("value", 0f, 1f, 0f, 0.01f, control: Pom.Pom.ManagedFieldWithPanel.ControlType.slider, displayName: "Value"),
+                new Pom.Pom.IntVector2Field("rect", new IntVector2(3, 3), controlType: Pom.Pom.IntVector2Field.IntVectorReprType.rect)
             };
             public GravityRectZoneData(PlacedObject owner) : base(owner, managedFields)
             {
