@@ -18,7 +18,6 @@ namespace ImplicitWorlds.POMObjects
             {
                 this.pObj = pObj;
                 this.room = room;
-                //this.pObj.active = true;
                 room.AddObject(this);
                 UnityEngine.Debug.Log("[IW]: GravityRectZone created!");
             }
@@ -32,57 +31,35 @@ namespace ImplicitWorlds.POMObjects
                     return resultRect;
                 }
             }
-            public float InitialGravity
-            {
-                get
-                {
-                    float result = 1f;
-                    bool isZeroG = false;
-                    for (int i = 0; i < room.roomSettings.effects.Count; i++)
-                    {
-                        if (room.roomSettings.effects[i].type == RoomSettings.RoomEffect.Type.ZeroG)
-                        {
-                            isZeroG = true;
-                            result = room.roomSettings.effects[i].amount;
-                        }
-                        else if (room.roomSettings.effects[i].type == RoomSettings.RoomEffect.Type.BrokenZeroG)
-                        {
-                            isZeroG = true;
-                            result = room.roomSettings.effects[i].amount;
-                        }
-                    }
-                    if (isZeroG)
-                    {
-                        return result;
-                    }
-                    else
-                    {
-                        return 1f;
-                    }
-                }
-            }
             public override void Update(bool eu)
             {
                 base.Update(eu);
+                bool hasZeroG = room.roomSettings.GetEffectAmount(RoomSettings.RoomEffect.Type.ZeroG) > 0f;
                 for (int i = 0; i < room.physicalObjects.Length; i++)
                 {
                     for (int j = 0; j < room.physicalObjects[i].Count; j++)
                     {
                         for (int k = 0; k < room.physicalObjects[i][j].bodyChunks.Length; k++)
                         {
-                            bool wasInsideRect = false;
                             Vector2 vector = room.physicalObjects[i][j].bodyChunks[k].ContactPoint.ToVector2();
                             Vector2 pos = room.physicalObjects[i][j].bodyChunks[k].pos + vector * (room.physicalObjects[i][j].bodyChunks[k].rad + 30f);
-                            if (Rect.Contains(room.GetTilePosition(pos)) && room.physicalObjects[i][j] is Player && wasInsideRect == false)
+                            if (Rect.Contains(room.GetTilePosition(pos)) && room.physicalObjects[i][j] is Player)
                             {
                                 room.gravity = ((GravityRectZoneData)pObj.data).GetValue<float>("value");
                                 UnityEngine.Debug.Log("[IW]: Player inside rect!");
-                                wasInsideRect = true;
+                                UnityEngine.Debug.Log($"Current gravity is: {room.gravity}");
                             }
-                            if (!Rect.Contains(room.GetTilePosition(pos), false) && wasInsideRect)
+                            else
                             {
-                                room.gravity = 1f; //InitialGravity;
-                                wasInsideRect = false;
+                                float zeroGValue = room.roomSettings.GetEffectAmount(RoomSettings.RoomEffect.Type.ZeroG);
+                                if (hasZeroG)
+                                {
+                                    room.gravity = 1f - Mathf.Lerp(0f, 0.85f, zeroGValue);
+                                }
+                                else
+                                {
+                                    room.gravity = 1f;
+                                }
                             }
                         }
                     }
