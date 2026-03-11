@@ -14,7 +14,7 @@ namespace ImplicitWorlds
             perspectiveCenter = new Vector2(room.game.rainWorld.screenSize.x * ConvergenceMult.x, room.game.rainWorld.screenSize.y * ConvergenceMult.y);
             sceneOrigo = ViewOffset;
             sceneScale = ViewScale;
-            AddElement(new Simple2DBackgroundIllustration(this, "iwsr_sky", new Vector2(683f, 384f)));
+            AddElement(new Simple2DBackgroundIllustration(this, "iwsr_sky_var2", new Vector2(683f, 384f)));
             clouds = new List<StellarCloud>();
             LoadGraphic("clouds1", false, false);
             LoadGraphic("clouds2", false, false);
@@ -249,7 +249,7 @@ namespace ImplicitWorlds
                 Vector2 vector = stScene.DrawPos(this, new Vector2(camPos.x, camPos.y), rCam);
                 sLeaser.sprites[0].x = vector.x;
                 sLeaser.sprites[0].y = vector.y;
-                sLeaser.sprites[0].color = new Color(1f, 1f, 1f, Mathf.Min(depth / endDepth, 1f));
+                sLeaser.sprites[0].color = new Color(1f, 1f, 1f, Mathf.Min(depth / endDepth * 0.46f, 1f));
                 base.DrawSprites(sLeaser, rCam, timeStacker, camPos);
             }
             private float scaleX;
