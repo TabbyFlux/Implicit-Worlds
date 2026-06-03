@@ -22,22 +22,22 @@
                         if (self.roomSettings.effects[i].type == IWEnums.RoomEffectType.NarrowHorizon)
                         {
                             self.AddObject(new NarrowHorizon(self, self.roomSettings.effects[i]));
-                            UnityEngine.Debug.Log("[ImplicitWorlds]: Narrow Horizon view added!");
+                            Debug.Log("[ImplicitWorlds]: Narrow Horizon view added!");
                         }
                         else if (self.roomSettings.effects[i].type == IWEnums.RoomEffectType.StellarSky)
                         {
                             self.AddObject(new StellarSky(self, self.roomSettings.effects[i]));
-                            UnityEngine.Debug.Log("[ImplicitWorlds]: Stellar Sky view added!");
+                            Debug.Log("[ImplicitWorlds]: Stellar Sky view added!");
                         }
                         else if (self.roomSettings.effects[i].type == IWEnums.RoomEffectType.IntegralField)
                         {
                             self.AddObject(new IntegralField(self, self.roomSettings.effects[i]));
-                            UnityEngine.Debug.Log("[ImplicitWorlds]: Integral Field view added!");
+                            Debug.Log("[ImplicitWorlds]: Integral Field view added!");
                         }
                         else if (self.roomSettings.effects[i].type == IWEnums.RoomEffectType.EncapsulatedSystems)
                         {
                             self.AddObject(new EncapsulatedSystems(self, self.roomSettings.effects[i]));
-                            UnityEngine.Debug.Log("[ImplicitWorlds]: Encapsulated Systems view added!");
+                            Debug.Log("[ImplicitWorlds]: Encapsulated Systems view added!");
                         }
                     }
                 }

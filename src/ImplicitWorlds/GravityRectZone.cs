@@ -1,4 +1,4 @@
-﻿using RegionKit.Modules.ShelterBehaviors;
+﻿using RegionKit.Extras;
 using RWCustom;
 
 namespace ImplicitWorlds.POMObjects
@@ -19,7 +19,7 @@ namespace ImplicitWorlds.POMObjects
                 this.pObj = pObj;
                 this.room = room;
                 room.AddObject(this);
-                UnityEngine.Debug.Log("[IW]: GravityRectZone created!");
+                Debug.Log("[ImplicitWorlds]: GravityRectZone created!");
             }
             public IntRect Rect
             {
@@ -27,7 +27,7 @@ namespace ImplicitWorlds.POMObjects
                 {
                     IntRect initialRect = IntRect.MakeFromIntVector2(((GravityRectZoneData)pObj.data).intV2Rect);
                     IntRect resultRect = new IntRect((int)(pObj.data.owner.pos.x / 20), (int)(pObj.data.owner.pos.y / 20), (int)(pObj.data.owner.pos.x / 20) + initialRect.right, (int)(pObj.data.owner.pos.y / 20) + initialRect.top);
-                    //UnityEngine.Debug.Log($"[IW]: Rect is calculated! Left: {resultRect.left}, Bottom: {resultRect.bottom}, Right: {resultRect.right}, Top: {resultRect.top}; Height: {resultRect.Height}, Width: {resultRect.Width}, Area: {resultRect.Area}");
+                    //UnityEngine.Debug.Log($"[ImplicitWorlds]: Rect is calculated! Left: {resultRect.left}, Bottom: {resultRect.bottom}, Right: {resultRect.right}, Top: {resultRect.top}; Height: {resultRect.Height}, Width: {resultRect.Width}, Area: {resultRect.Area}");
                     return resultRect;
                 }
             }
@@ -46,8 +46,8 @@ namespace ImplicitWorlds.POMObjects
                             if (Rect.Contains(room.GetTilePosition(pos)) && room.physicalObjects[i][j] is Player)
                             {
                                 room.gravity = ((GravityRectZoneData)pObj.data).GetValue<float>("value");
-                                UnityEngine.Debug.Log("[IW]: Player inside rect!");
-                                UnityEngine.Debug.Log($"Current gravity is: {room.gravity}");
+                                Debug.Log("[ImplicitWorlds]: Player inside rect!");
+                                Debug.Log($"Current gravity is: {room.gravity}");
                             }
                             else
                             {

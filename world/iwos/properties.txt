@@ -3,4 +3,4 @@ overseersMin: 0
 overseersMax: 0
 playerGuideOverseerSpawnChance: 0
 hideTimer: false
-Subregion: Overgrown Sector
+Subregion: Overgrown Cascade

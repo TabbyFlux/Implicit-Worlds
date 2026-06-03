@@ -1,11 +1,15 @@
 0implicitworlds.tabbyflux-name|Неявные миры
-implicitworlds.tabbyflux-description|Неожиданно в мире появился неизвестный портальный разлом... Осмелитесь ли вы пройти через него?<LINE><LINE>Пространственные струны мироздания вздрогнули, новые миры открылись... Исследуйте 6 новых, загадочных регионов, столкнитесь с аномалиями и сбоями реальности и пространства-времени.<LINE><LINE>Особенности:<LINE>- 6 новых регионов<LINE>- Возможность посещения обычными слизнекотами<LINE>- Возможность посещения Созерцателем<LINE>- НОВАЯ КОНЦОВКА
+implicitworlds.tabbyflux-description|[ДАННЫЕ ВРЕМЕННО НЕДОСТУПНЫ]
 Stellar Highways|Звёздные магистрали
 Narrow Horizon|Узкий горизонт
 Inactive Bridge|Бездействующий мост
 Farthest Future|Предалёкое будущее
-Overgrown Sector|Заросший сектор
+Overgrown Cascade|Заросший каскад
 Encapsulated Systems|Инкапсулированные системы
 Encapsulated Systems (Metaservers)|Инкапсулированные системы (метасерверы)
 Integral Field|Интегральное поле
 Integral Field (Transmitting Bridge)|Интегральное поле (передающий мост)
+
+the fallen simulation|павшая симуляция
+eternal quiet hum of computing|вечный тихий гул вычислений
+most powerful mainframes with unknown purpose|мощнейшие мэйнфреймы неизвестного назначения

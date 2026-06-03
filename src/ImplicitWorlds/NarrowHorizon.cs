@@ -8,6 +8,7 @@
             UnityEngine.Random.InitState(0);
             this.effect = effect;
             Shader.SetGlobalVector(RainWorld.ShadPropAboveCloudsAtmosphereColor, atmosphereColor);
+            Shader.SetGlobalVector(RainWorld.ShadPropMultiplyColor, Color.white);
             //sceneOrigo = base.RoomToWorldPos(room.abstractRoom.size.ToVector2() * 10f);
             perspectiveCenter = new Vector2(room.game.rainWorld.screenSize.x * ConvergenceMult.x, room.game.rainWorld.screenSize.y * ConvergenceMult.y);
             sceneOrigo = ViewOffset;

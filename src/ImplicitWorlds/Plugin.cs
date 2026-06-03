@@ -48,7 +48,7 @@ namespace ImplicitWorlds
                     IWEnums.RoomPOMObjects.RegisterPOMObjects();
                     IWHooks.Apply();
                     this.isInit = true;
-                    UnityEngine.Debug.Log($"[ImplicitWorlds]: inited: {this.isInit}");
+                    Debug.Log($"[ImplicitWorlds]: inited: {this.isInit}");
                     Logger.LogDebug($"[ImplicitWorlds]: inited: {this.isInit}");
                 }
             }
