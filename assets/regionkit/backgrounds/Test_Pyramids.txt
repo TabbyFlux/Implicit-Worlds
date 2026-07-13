@@ -13,7 +13,7 @@ cloudsEndDepth: 40
 distantCloudsEndDepth: 200
 cloudsCount: 16
 distantCloudsCount: 38
-daySky: AtC_DuskSky
+daySky: IWPO_Sky
 duskSky: AtC_DuskSky-Rivulet
 nightSky: AtC_NightSky
 
